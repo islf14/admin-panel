@@ -139,7 +139,7 @@ Banner
 	margin-top: 30px;
 }
 .quote .btn{
-    background-color:
+    background-color: #fff;
 }
 .modal-dialog {
     width: 600px;
@@ -660,7 +660,7 @@ Footer
     width: 24%;
     padding: 10px 10px;
     margin-bottom: 15px;
-    color: #fff;: #fafafa;
+    color:  #fafafa;
     border: 1px solid rgba(119, 81, 81, 0.34);
     width: 24%;
     margin-bottom: 15px;

@@ -13,8 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/w', function () {
     return view('welcome');
+});
+Route::get('/', function () {
+    return view('publicpage.page');
 });
 
 Auth::routes();
