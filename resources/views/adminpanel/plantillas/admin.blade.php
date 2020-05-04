@@ -11,14 +11,14 @@
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link rel="shortcut icon" href="{{asset('panel/images/favicon.ico')}}">
 
         <!-- Bootstrap Css -->
-        <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <link href="{{asset('panel/css/bootstrap.min.css')}}" id="bootstrap-style" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
-        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{asset('panel/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
         <!-- App Css-->
-        <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+        <link href="{{asset('panel/css/app.min.css')}}" id="app-style" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -34,19 +34,19 @@
                         <div class="navbar-brand-box">
                             <a href="index.html" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="assets/images/logo.svg" alt="" height="22">
+                                    <img src="panel/images/logo.svg" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/logo-dark.png" alt="" height="17">
+                                    <img src="panel/images/logo-dark.png" alt="" height="17">
                                 </span>
                             </a>
 
                             <a href="index.html" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="assets/images/logo-light.svg" alt="" height="22">
+                                    <img src="panel/images/logo-light.svg" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/logo-light.png" alt="" height="19">
+                                    <img src="panel/images/logo-light.png" alt="" height="19">
                                 </span>
                             </a>
                         </div>
@@ -184,7 +184,7 @@
 
                                             <div class="col-sm-5">
                                                 <div>
-                                                    <img src="assets/images/megamenu-img.png" alt="" class="img-fluid mx-auto d-block">
+                                                    <img src="panel/images/megamenu-img.png" alt="" class="img-fluid mx-auto d-block">
                                                 </div>
                                             </div>
                                         </div>
@@ -221,28 +221,28 @@
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item waves-effect"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="" src="assets/images/flags/us.jpg" alt="Header Language" height="16">
+                                <img class="" src="panel/images/flags/us.jpg" alt="Header Language" height="16">
                             </button>
                             <div class="dropdown-menu dropdown-menu-right">
                     
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/images/flags/spain.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Spanish</span>
+                                    <img src="panel/images/flags/spain.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Spanish</span>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/images/flags/germany.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">German</span>
+                                    <img src="panel/images/flags/germany.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">German</span>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/images/flags/italy.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Italian</span>
+                                    <img src="panel/images/flags/italy.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Italian</span>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/images/flags/russia.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Russian</span>
+                                    <img src="panel/images/flags/russia.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Russian</span>
                                 </a>
                             </div>
                         </div>
@@ -257,19 +257,19 @@
                                     <div class="row no-gutters">
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="assets/images/brands/github.png" alt="Github">
+                                                <img src="panel/images/brands/github.png" alt="Github">
                                                 <span>GitHub</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="assets/images/brands/bitbucket.png" alt="bitbucket">
+                                                <img src="panel/images/brands/bitbucket.png" alt="bitbucket">
                                                 <span>Bitbucket</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="assets/images/brands/dribbble.png" alt="dribbble">
+                                                <img src="panel/images/brands/dribbble.png" alt="dribbble">
                                                 <span>Dribbble</span>
                                             </a>
                                         </div>
@@ -278,19 +278,19 @@
                                     <div class="row no-gutters">
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="assets/images/brands/dropbox.png" alt="dropbox">
+                                                <img src="panel/images/brands/dropbox.png" alt="dropbox">
                                                 <span>Dropbox</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="assets/images/brands/mail_chimp.png" alt="mail_chimp">
+                                                <img src="panel/images/brands/mail_chimp.png" alt="mail_chimp">
                                                 <span>Mail Chimp</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="assets/images/brands/slack.png" alt="slack">
+                                                <img src="panel/images/brands/slack.png" alt="slack">
                                                 <span>Slack</span>
                                             </a>
                                         </div>
@@ -342,7 +342,7 @@
                                     </a>
                                     <a href="#" class="text-reset notification-item">
                                         <div class="media">
-                                            <img src="assets/images/users/avatar-3.jpg"
+                                            <img src="panel/images/users/avatar-3.jpg"
                                                 class="mr-3 rounded-circle avatar-xs" alt="user-pic">
                                             <div class="media-body">
                                                 <h6 class="mt-0 mb-1">James Lemire</h6>
@@ -372,7 +372,7 @@
 
                                     <a href="#" class="text-reset notification-item">
                                         <div class="media">
-                                            <img src="assets/images/users/avatar-4.jpg"
+                                            <img src="panel/images/users/avatar-4.jpg"
                                                 class="mr-3 rounded-circle avatar-xs" alt="user-pic">
                                             <div class="media-body">
                                                 <h6 class="mt-0 mb-1">Salena Layfield</h6>
@@ -395,7 +395,7 @@
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                                <img class="rounded-circle header-profile-user" src="panel/images/users/avatar-1.jpg"
                                     alt="Header Avatar">
                                 <span class="d-none d-xl-inline-block ml-1">Henry</span>
                                 <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
@@ -765,7 +765,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-5 align-self-end">
-                                                <img src="assets/images/profile-img.png" alt="" class="img-fluid">
+                                                <img src="panel/images/profile-img.png" alt="" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>
@@ -773,7 +773,7 @@
                                         <div class="row">
                                             <div class="col-sm-4">
                                                 <div class="avatar-md profile-user-wid mb-4">
-                                                    <img src="assets/images/users/avatar-1.jpg" alt="" class="img-thumbnail rounded-circle">
+                                                    <img src="panel/images/users/avatar-1.jpg" alt="" class="img-thumbnail rounded-circle">
                                                 </div>
                                                 <h5 class="font-size-15 text-truncate">Henry Price</h5>
                                                 <p class="text-muted mb-0 text-truncate">UI/UX Designer</p>
@@ -1331,7 +1331,7 @@
                                             <tr>
                                                 <th scope="row">
                                                     <div>
-                                                        <img src="assets/images/product/img-7.png" alt="" class="avatar-sm">
+                                                        <img src="panel/images/product/img-7.png" alt="" class="avatar-sm">
                                                     </div>
                                                 </th>
                                                 <td>
@@ -1345,7 +1345,7 @@
                                             <tr>
                                                 <th scope="row">
                                                     <div>
-                                                        <img src="assets/images/product/img-4.png" alt="" class="avatar-sm">
+                                                        <img src="panel/images/product/img-4.png" alt="" class="avatar-sm">
                                                     </div>
                                                 </th>
                                                 <td>
@@ -1428,7 +1428,7 @@
 
                 <div class="p-4">
                     <div class="mb-2">
-                        <img src="assets/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt="">
+                        <img src="panel/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt="">
                     </div>
                     <div class="custom-control custom-switch mb-3">
                         <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked />
@@ -1436,18 +1436,18 @@
                     </div>
     
                     <div class="mb-2">
-                        <img src="assets/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt="">
+                        <img src="panel/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt="">
                     </div>
                     <div class="custom-control custom-switch mb-3">
-                        <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css" data-appStyle="assets/css/app-dark.min.css" />
+                        <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch" data-bsStyle="panel/css/bootstrap-dark.min.css" data-appStyle="panel/css/app-dark.min.css" />
                         <label class="custom-control-label" for="dark-mode-switch">Dark Mode</label>
                     </div>
     
                     <div class="mb-2">
-                        <img src="assets/images/layouts/layout-3.jpg" class="img-fluid img-thumbnail" alt="">
+                        <img src="panel/images/layouts/layout-3.jpg" class="img-fluid img-thumbnail" alt="">
                     </div>
                     <div class="custom-control custom-switch mb-5">
-                        <input type="checkbox" class="custom-control-input theme-choice" id="rtl-mode-switch" data-appStyle="assets/css/app-rtl.min.css" />
+                        <input type="checkbox" class="custom-control-input theme-choice" id="rtl-mode-switch" data-appStyle="panel/css/app-rtl.min.css" />
                         <label class="custom-control-label" for="rtl-mode-switch">RTL Mode</label>
                     </div>
 
@@ -1462,19 +1462,22 @@
         <div class="rightbar-overlay"></div>
 
         <!-- JAVASCRIPT -->
-        <script src="assets/libs/jquery/jquery.min.js"></script>
-        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
-        <script src="assets/libs/simplebar/simplebar.min.js"></script>
-        <script src="assets/libs/node-waves/waves.min.js"></script>
+        <script src="{{asset('panel/libs/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('panel/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('panel/libs/metismenu/metisMenu.min.js')}}"></script>
+        <script src="{{asset('panel/libs/simplebar/simplebar.min.js')}}"></script>
+        <script src="{{asset('panel/libs/node-waves/waves.min.js')}}"></script>
 
         <!-- apexcharts -->
-        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+        <script src="{{asset('panel/libs/apexcharts/apexcharts.min.js')}}"></script>
 
-        <script src="assets/js/pages/dashboard.init.js"></script>
+        <script src="{{asset('panel/js/pages/dashboard.init.js')}}"></script>
 
         <!-- App js -->
-        <script src="assets/js/app.js"></script>
+        {{-- <script src="{{asset('panel/js/app.js')}}"></script> --}}
+
+
+        
     </body>
 
 

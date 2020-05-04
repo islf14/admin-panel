@@ -19,6 +19,9 @@ Route::get('/w', function () {
 Route::get('/', function () {
     return view('publicpage.page');
 });
+Route::get('/admin', function () {
+    return view('adminpanel.plantillas.admin');
+});
 
 Auth::routes();
 
