@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('publicpage.page');
 });
 Route::get('/admin', function () {
-    return view('adminpanel.plantillas.admin');
+    return view('adminpanel.admin.inicio');
 });
 
 Auth::routes();
