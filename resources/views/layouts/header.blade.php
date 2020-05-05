@@ -12,13 +12,15 @@
                     </span>
                 </a>
 
-                <a href="index.html" class="logo logo-light">
-                    <span class="logo-sm">
+            <a href="{{route('admin')}}" class="logo logo-light">
+                    {{-- <span class="logo-sm">
                         <img src="panel/images/logo-light.svg" alt="" height="22">
                     </span>
                     <span class="logo-lg">
                         <img src="panel/images/logo-light.png" alt="" height="19">
-                    </span>
+                    </span> --}}
+                    <span class="text-danger">Admin</span>
+                    <span class="text-light">Ugel</span>
                 </a>
             </div>
 

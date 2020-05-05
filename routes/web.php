@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 Route::get('/admin', function () {
     return view('adminpanel.admin.inicio');
-});
+})->name('admin');
 
 Auth::routes();
 

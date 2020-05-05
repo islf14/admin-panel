@@ -21,13 +21,13 @@
                 <label class="custom-control-label" for="light-mode-switch">Light Mode</label>
             </div>
 
-            <div class="mb-2">
+            {{-- <div class="mb-2">
                 <img src="panel/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt="">
             </div>
             <div class="custom-control custom-switch mb-3">
                 <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch" data-bsStyle="panel/css/bootstrap-dark.min.css" data-appStyle="panel/css/app-dark.min.css" />
                 <label class="custom-control-label" for="dark-mode-switch">Dark Mode</label>
-            </div>
+            </div> --}}
 
             <div class="mb-2">
                 <img src="panel/images/layouts/layout-3.jpg" class="img-fluid img-thumbnail" alt="">
