@@ -13,16 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
 Route::get('/w', function () {
     return view('welcome');
 });
 Route::get('/', function () {
     return view('publicpage.page');
 });
+
+Route::get('/pupload', function () { return view('adminpanel.plantillas.form-uploads'); });
+
 Route::get('/admin', function () {
     return view('adminpanel.admin.inicio');
 })->name('admin');
 
-Auth::routes();
+Route::get('/formulariotramite', function () {return view('prueba.index');})->name('formulariotramite');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/archivo/create', 'ArchivoController@create')->name('archivo.create');
+Route::post('/archivo/store', 'ArchivoController@store')->name('archivo.store');

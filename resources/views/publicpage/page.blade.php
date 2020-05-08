@@ -13,12 +13,7 @@
   <link rel="stylesheet" type="text/css" href="{{asset('page/css/bootstrap.min.css')}}">
   <link rel="stylesheet" type="text/css" href="{{asset('page/css/imagehover.min.css')}}">
   <link rel="stylesheet" type="text/css" href="{{asset('page/css/style.css')}}">
-  <!-- =======================================================
-    Theme Name: Mentor
-    Theme URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-  ======================================================= -->
+  
 </head>
 
 <body>
@@ -31,16 +26,16 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Men<span>tor</span></a>
+        <a class="navbar-brand" href="index.html">UGEL <span> TACNA</span></a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#feature">Features</a></li>
-          <li><a href="#organisations">Organisations</a></li>
+          <li><a href="#feature">Comunicados</a></li>
+          <li><a href="#organisations">Trámites</a></li>
           <li><a href="#courses">Courses</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#" data-target="#login" data-toggle="modal">Sign in</a></li>
-          <li class="btn-trial"><a href="#footer">Free Trail</a></li>
+          {{-- <li class="btn-trial"><a href="#footer">Free Trail</a></li> --}}
         </ul>
       </div>
     </div>
@@ -233,8 +228,9 @@
         <div class="col-md-6">
           <div class="detail-info">
             <hgroup>
-              <h3 class="det-txt"> Is inclusive quality education affordable?</h3>
-              <h4 class="sm-txt">(Revised and Updated for 2016)</h4>
+              <h3 class="det-txt"> Registrar trámite</h3>
+              <h4 class="sm-txt">(2020)</h4>
+              <a href="{{route('formulariotramite')}}">Formulario de carga</a>
             </hgroup>
             <p class="det-p">Donec et lectus bibendum dolor dictum auctor in ac erat. Vestibulum egestas sollicitudin metus non urna in eros tincidunt convallis id id nisi in interdum.</p>
           </div>
