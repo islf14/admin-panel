@@ -35,7 +35,7 @@
                             <h4 class="card-title mb-4">Example</h4>
                             <form class="repeater" enctype="multipart/form-data" role="form" method="POST" action="{{ route('archivo.store') }}">
                                 @csrf
-                                <div data-repeater-list="group-a">
+                                <div data-repeater-list="group_a">
                                     <div data-repeater-item class="row">
                                         <div  class="form-group col-lg-4">
                                             <label for="name">Name</label>

@@ -37,8 +37,26 @@ class ArchivoController extends Controller
     {
         //
         // dd($request);
-        $nombre = $request->name;
-        dd($nombre);
+        // dd($request->group_a[0]);
+        $a = $request->group_a[0]["archivo"];
+        // dd($a);
+        echo $a->getClientOriginalName();
+        echo " - ";
+        echo $a->getClientOriginalExtension();
+        echo " - ";
+        echo public_path();
+
+
+        // dd($b);
+        // dd($a["archivo"]);
+        // $on = $a["archivo"]->originalName;
+        // dd($on);
+
+        // $file = $request->file("archivo");
+        // dd($file);
+
+        // dd(count($request->group_a));
+        // dd($);
     }
 
     /**
