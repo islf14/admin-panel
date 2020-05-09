@@ -38,50 +38,40 @@ class ArchivoController extends Controller
      */
     public function store(Request $request)
     {
-        //$file = $request->file('photo');
-        // dd($request->group_a[0]);
-
-
         $archivo = $request->group_a[0]["archivo"];
 
-
-        // echo $archivo->getClientOriginalName();
-        // echo $archivo->getClientOriginalExtension();
 
         // $name = str_replace(' ','_',$archivo->getClientOriginalName()).'_file_'.time().'.'.$archivo->getClientOriginalExtension();
         // $path = public_path().'/resources/archivos/';
         // $ruta = $path.$name;
 
         // $ret = $archivo->store('archivito.jpg');
-
-        // $pho = 'carpetaone/Zac1C3Z3cWmnyhaprTWGtBDU99lBd72BHj5ZhxDl.jpeg';
-
-
         // $ret = Storage::put('carpetaone', $archivo);
 
-        // $ret = Storage::disk('public')->put('archivos', $archivo);
+        $ret = Storage::disk('public')->put('archivos', $archivo);
 
         // $ret = Storage::disk('public')->get('archivos/c7BNZnHtmcaoyKdu6r4Pfh7btquEcJteE1XGgde0');
 
         // return Storage::disk('public')->download('archivos/ERAH8PPiatXIY6OxP6kDvZhAKW24pNCcVJy51pSY.jpeg','fotito.jpeg');
 
         // echo asset('storage/6rbmQFVIggNv41lxIkywAzeAtGEpY0EQN591TGla.jpeg');
+        // echo asset('storage/archivos/ERAH8PPiatXIY6OxP6kDvZhAKW24pNCcVJy51pSY.jpeg')
 
         // $con = Storage::get('carpetaone/Zac1C3Z3cWmnyhaprTWGtBDU99lBd72BHj5ZhxDl.jpeg');
 
-        $ret = Storage::url('archivos/ERAH8PPiatXIY6OxP6kDvZhAKW24pNCcVJy51pSY.jpeg');
-        // $ret = Storage::disk('public')->url('archivos/ERAH8PPiatXIY6OxP6kDvZhAKW24pNCcVJy51pSY.jpeg');
+        // $ret = Storage::url('carpetaone/Zac1C3Z3cWmnyhaprTWGtBDU99lBd72BHj5ZhxDl.jpeg');
+        // $url = Storage::disk('public')->url('ERAH8PPiatXIY6OxP6kDvZhAKW24pNCcVJy51pSY.jpeg');
+        $url2 = url(Storage::url($ret));
 
+        
         // $ret = Storage::disk('public')->size('archivos/ERAH8PPiatXIY6OxP6kDvZhAKW24pNCcVJy51pSY.jpeg');
         
-        
+        return redirect()->away($url2);
+        echo $ret."<br/>";
+        // echo $url."<br/>";
+        echo $url2."<br/>";
 
-        // echo $name;
-        // echo '/n';
-        // echo $path;
-        // echo '/n';
-        // dd($ret);
-        echo ' '.$ret;
+
         // echo $visibility;
         
 
