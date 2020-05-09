@@ -44,7 +44,7 @@
 
                                         {{-- <div  class="form-group col-lg-2">
                                             <label for="email">Email</label>
-                                            <input type="email" id="email" class="form-control"/>
+                                            <input type="email" id="email" class="form-control" accept=".jpge,.jpg,.png,.gif" />
                                         </div> --}}
 
                                         {{-- <div  class="form-group col-lg-2">

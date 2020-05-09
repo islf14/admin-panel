@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Archivo;
 use Illuminate\Http\Request;
 
+use Illuminate\Http\File;
+use Illuminate\Support\Facades\Storage;
+
 class ArchivoController extends Controller
 {
     /**
@@ -35,16 +38,52 @@ class ArchivoController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        // dd($request);
+        //$file = $request->file('photo');
         // dd($request->group_a[0]);
-        $a = $request->group_a[0]["archivo"];
-        // dd($a);
-        echo $a->getClientOriginalName();
-        echo " - ";
-        echo $a->getClientOriginalExtension();
-        echo " - ";
-        echo public_path();
+
+
+        $archivo = $request->group_a[0]["archivo"];
+
+
+        // echo $archivo->getClientOriginalName();
+        // echo $archivo->getClientOriginalExtension();
+
+        // $name = str_replace(' ','_',$archivo->getClientOriginalName()).'_file_'.time().'.'.$archivo->getClientOriginalExtension();
+        // $path = public_path().'/resources/archivos/';
+        // $ruta = $path.$name;
+
+        // $ret = $archivo->store('archivito.jpg');
+
+        // $pho = 'carpetaone/Zac1C3Z3cWmnyhaprTWGtBDU99lBd72BHj5ZhxDl.jpeg';
+
+
+        // $ret = Storage::put('carpetaone', $archivo);
+
+        // $ret = Storage::disk('public')->put('archivos', $archivo);
+
+        // $ret = Storage::disk('public')->get('archivos/c7BNZnHtmcaoyKdu6r4Pfh7btquEcJteE1XGgde0');
+
+        // return Storage::disk('public')->download('archivos/ERAH8PPiatXIY6OxP6kDvZhAKW24pNCcVJy51pSY.jpeg','fotito.jpeg');
+
+        // echo asset('storage/6rbmQFVIggNv41lxIkywAzeAtGEpY0EQN591TGla.jpeg');
+
+        // $con = Storage::get('carpetaone/Zac1C3Z3cWmnyhaprTWGtBDU99lBd72BHj5ZhxDl.jpeg');
+
+        $ret = Storage::url('archivos/ERAH8PPiatXIY6OxP6kDvZhAKW24pNCcVJy51pSY.jpeg');
+        // $ret = Storage::disk('public')->url('archivos/ERAH8PPiatXIY6OxP6kDvZhAKW24pNCcVJy51pSY.jpeg');
+
+        // $ret = Storage::disk('public')->size('archivos/ERAH8PPiatXIY6OxP6kDvZhAKW24pNCcVJy51pSY.jpeg');
+        
+        
+
+        // echo $name;
+        // echo '/n';
+        // echo $path;
+        // echo '/n';
+        // dd($ret);
+        echo ' '.$ret;
+        // echo $visibility;
+        
 
 
         // dd($b);

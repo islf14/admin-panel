@@ -313,7 +313,7 @@
           <div class="pm-staff-profile-container">
             <div class="pm-staff-profile-image-wrapper text-center">
               <div class="pm-staff-profile-image">
-                <img src="page/img/mentor.jpg" alt="" class="img-thumbnail img-circle" />
+                <img src="{{asset('page/img/mentor.jpg')}}" alt="" class="img-thumbnail img-circle" />
               </div>
             </div>
             <div class="pm-staff-profile-details text-center">
@@ -328,7 +328,7 @@
           <div class="pm-staff-profile-container">
             <div class="pm-staff-profile-image-wrapper text-center">
               <div class="pm-staff-profile-image">
-                <img src="page/img/mentor.jpg" alt="" class="img-thumbnail img-circle" />
+              <img src="{{asset('storage/archivos/ERAH8PPiatXIY6OxP6kDvZhAKW24pNCcVJy51pSY.jpeg')}}" alt="" class="img-thumbnail img-circle" />
               </div>
             </div>
             <div class="pm-staff-profile-details text-center">
