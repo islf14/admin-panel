@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Archivo;
+use App\Solicitud;
 use Illuminate\Http\Request;
 
+use Carbon\Carbon;
 use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
 
@@ -38,7 +40,28 @@ class ArchivoController extends Controller
      */
     public function store(Request $request)
     {
+        // dd(Carbon::now());
         $archivo = $request->group_a[0]["archivo"];
+        $ruta = Storage::disk('public')->put('archivos', $archivo);
+
+        $datos["solicitud"] = "hago una queja ...";
+        $datos["fecha"] = Carbon::now();
+        $datos["estadosolicitud_id"] = 1;
+        $datos["tramite_id"] = 1;
+        $datos["users_id"] = 4;
+        $solicitud_r = Solicitud::create($datos);
+        $idSol = $solicitud_r["id"];
+
+        $adjunto["nombre"] = "dni";
+        $adjunto["solicitud_id"] = $idSol;
+        $adjunto["ruta"] = $ruta;
+        $adjunto["oficina"] = "";
+        $adjunto["cargo"] = "";
+        $adjunto["fecha"] = Carbon::now();
+        $adjunto["tipopersona_id"] = 1;
+        $adjunto["formato_id"] = 1;
+        $adjunto["users_id"] = 1;
+
 
 
         // $name = str_replace(' ','_',$archivo->getClientOriginalName()).'_file_'.time().'.'.$archivo->getClientOriginalExtension();
@@ -48,7 +71,7 @@ class ArchivoController extends Controller
         // $ret = $archivo->store('archivito.jpg');
         // $ret = Storage::put('carpetaone', $archivo);
 
-        $ret = Storage::disk('public')->put('archivos', $archivo);
+        
 
         // $ret = Storage::disk('public')->get('archivos/c7BNZnHtmcaoyKdu6r4Pfh7btquEcJteE1XGgde0');
 
@@ -61,13 +84,13 @@ class ArchivoController extends Controller
 
         // $ret = Storage::url('carpetaone/Zac1C3Z3cWmnyhaprTWGtBDU99lBd72BHj5ZhxDl.jpeg');
         // $url = Storage::disk('public')->url('ERAH8PPiatXIY6OxP6kDvZhAKW24pNCcVJy51pSY.jpeg');
-        $url2 = url(Storage::url($ret));
+        $url2 = url(Storage::url($ruta));
 
         
         // $ret = Storage::disk('public')->size('archivos/ERAH8PPiatXIY6OxP6kDvZhAKW24pNCcVJy51pSY.jpeg');
         
-        return redirect()->away($url2);
-        echo $ret."<br/>";
+        // return redirect()->away($url2);
+        echo $idSol."<br/>";
         // echo $url."<br/>";
         echo $url2."<br/>";
 
