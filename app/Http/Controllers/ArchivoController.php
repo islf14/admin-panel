@@ -4,11 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Archivo;
 use App\Solicitud;
+use App\Adjunto;
+use App\Movimiento;
 use Illuminate\Http\Request;
 
 use Carbon\Carbon;
 use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Database\QueryException;
 
 class ArchivoController extends Controller
 {
@@ -40,29 +43,82 @@ class ArchivoController extends Controller
      */
     public function store(Request $request)
     {
-        // dd(Carbon::now());
+        $fecha_actual = Carbon::now();
+
         $archivo = $request->group_a[0]["archivo"];
         $ruta = Storage::disk('public')->put('archivos', $archivo);
 
-        $datos["solicitud"] = "hago una queja ...";
-        $datos["fecha"] = Carbon::now();
+        //Crea solicitud
+        $datos["solicitud"] = "sol nueva";
+        $datos["fecha"] = $fecha_actual;
         $datos["estadosolicitud_id"] = 1;
         $datos["tramite_id"] = 1;
         $datos["users_id"] = 4;
-        $solicitud_r = Solicitud::create($datos);
-        $idSol = $solicitud_r["id"];
+        try{
+            $solicitud_r = Solicitud::create($datos);
+            $idSol = $solicitud_r["id"];
+        } catch(QueryException $e){
+            dd($e);
+        }
 
-        $adjunto["nombre"] = "dni";
-        $adjunto["solicitud_id"] = $idSol;
-        $adjunto["ruta"] = $ruta;
-        $adjunto["oficina"] = "";
-        $adjunto["cargo"] = "";
-        $adjunto["fecha"] = Carbon::now();
-        $adjunto["tipopersona_id"] = 1;
-        $adjunto["formato_id"] = 1;
-        $adjunto["users_id"] = 1;
+        //Recupera y guarda archivos
+        $long_a = count($request->group_a);
+        $idsAdjunto = Array();
+
+        //Crea adjuntos
+        for($i=0;$i<$long_a;$i++){
+
+            $archivo = $request->group_a[$i]["archivo"];
+            $nombre = $request->group_a[$i]["name"];
+            $ruta = Storage::disk('public')->put('archivos', $archivo);
+
+            $adjunto["nombre"] = $nombre;
+            $adjunto["solicitud_id"] = $idSol;
+            $adjunto["ruta"] = $ruta;
+            $adjunto["fecha"] = $fecha_actual;
+            $adjunto["users_id"] = 4;//4 5
+            $adjunto["tipopersona_id"] = 2;
+            try{
+                $adjunto_r = Adjunto::create($adjunto);
+                $idAdj = $adjunto_r["id"];
+                $idsAdjunto[$i] = $idAdj;//guarda los id
+            } catch(QueryException $e){
+
+                if($long_a>1 && count($idsAdjunto)>0){
+                    Adjunto::destroy($idsAdjunto);
+                }
+                Solicitud::destroy($idSol);
+                dd($e);
+            }
+        }
+        
+        //Crea primer movimiento
+        $movimiento["observacion"] = "";
+        $movimiento["solicitud_id"] = $idSol;
+        $movimiento["fecha"] = $fecha_actual;
+        $movimiento["tipomovimiento_id"] = 1;//1 5
+        try{
+            $movimiento_r = Movimiento::create($movimiento);
+            $idMov = $movimiento_r["id"];
+        } catch(QueryException $e) {
+            Adjunto::destroy($idsAdjunto);
+            Solicitud::destroy($idSol);
+            dd($e);
+        }
 
 
+        $url2 = url(Storage::url($ruta));
+        // return redirect()->away($url2);
+        echo "idsol ".$idSol."<br/>";
+        echo $idAdj."<br/>";
+        echo $idMov."<br/>";
+        echo $long_a."<br/>";
+        echo "<br/>";
+        echo $url2."<br/>";
+        dd($idsAdjunto);
+
+
+        //User::find($id)->delete();
 
         // $name = str_replace(' ','_',$archivo->getClientOriginalName()).'_file_'.time().'.'.$archivo->getClientOriginalExtension();
         // $path = public_path().'/resources/archivos/';
@@ -84,15 +140,11 @@ class ArchivoController extends Controller
 
         // $ret = Storage::url('carpetaone/Zac1C3Z3cWmnyhaprTWGtBDU99lBd72BHj5ZhxDl.jpeg');
         // $url = Storage::disk('public')->url('ERAH8PPiatXIY6OxP6kDvZhAKW24pNCcVJy51pSY.jpeg');
-        $url2 = url(Storage::url($ruta));
+        
 
         
         // $ret = Storage::disk('public')->size('archivos/ERAH8PPiatXIY6OxP6kDvZhAKW24pNCcVJy51pSY.jpeg');
         
-        // return redirect()->away($url2);
-        echo $idSol."<br/>";
-        // echo $url."<br/>";
-        echo $url2."<br/>";
 
 
         // echo $visibility;
