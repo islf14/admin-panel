@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-flex align-items-center justify-content-between">
-                        <h4 class="mb-0 font-size-18">Dashboard</h4>
+                        <h4 class="mb-0 font-size-18">Nuevo trámite</h4>
 
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
@@ -33,7 +33,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title mb-4">Example</h4>
-                            <form class="repeater" enctype="multipart/form-data" role="form" method="POST" action="{{ route('archivo.store') }}">
+                            <form class="repeater" enctype="multipart/form-data" role="form" method="POST" action="{{ route('tramite.store') }}">
                                 @csrf
                                 <div data-repeater-list="group_a">
                                     <div data-repeater-item class="row">

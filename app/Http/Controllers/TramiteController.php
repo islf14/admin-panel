@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Archivo;
+use App\Tramite;
 use App\Solicitud;
 use App\Adjunto;
 use App\Movimiento;
@@ -13,7 +13,7 @@ use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\QueryException;
 
-class ArchivoController extends Controller
+class TramiteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -32,7 +32,7 @@ class ArchivoController extends Controller
      */
     public function create()
     {
-        dd("en create");
+        return view('clientepanel.tramite.create');
     }
 
     /**
@@ -120,59 +120,15 @@ class ArchivoController extends Controller
         echo "<br/>";
         echo "url: ".$url2."<br/>";
 
-
-        //User::find($id)->delete();
-
-        // $name = str_replace(' ','_',$archivo->getClientOriginalName()).'_file_'.time().'.'.$archivo->getClientOriginalExtension();
-        // $path = public_path().'/resources/archivos/';
-        // $ruta = $path.$name;
-
-        // $ret = $archivo->store('archivito.jpg');
-        // $ret = Storage::put('carpetaone', $archivo);
-
-        
-
-        // $ret = Storage::disk('public')->get('archivos/c7BNZnHtmcaoyKdu6r4Pfh7btquEcJteE1XGgde0');
-
-        // return Storage::disk('public')->download('archivos/ERAH8PPiatXIY6OxP6kDvZhAKW24pNCcVJy51pSY.jpeg','fotito.jpeg');
-
-        // echo asset('storage/6rbmQFVIggNv41lxIkywAzeAtGEpY0EQN591TGla.jpeg');
-        // echo asset('storage/archivos/ERAH8PPiatXIY6OxP6kDvZhAKW24pNCcVJy51pSY.jpeg')
-
-        // $con = Storage::get('carpetaone/Zac1C3Z3cWmnyhaprTWGtBDU99lBd72BHj5ZhxDl.jpeg');
-
-        // $ret = Storage::url('carpetaone/Zac1C3Z3cWmnyhaprTWGtBDU99lBd72BHj5ZhxDl.jpeg');
-        // $url = Storage::disk('public')->url('ERAH8PPiatXIY6OxP6kDvZhAKW24pNCcVJy51pSY.jpeg');
-        
-
-        
-        // $ret = Storage::disk('public')->size('archivos/ERAH8PPiatXIY6OxP6kDvZhAKW24pNCcVJy51pSY.jpeg');
-        
-
-
-        // echo $visibility;
-        
-
-
-        // dd($b);
-        // dd($a["archivo"]);
-        // $on = $a["archivo"]->originalName;
-        // dd($on);
-
-        // $file = $request->file("archivo");
-        // dd($file);
-
-        // dd(count($request->group_a));
-        // dd($);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Archivo  $archivo
+     * @param  \App\Tramite  $tramite
      * @return \Illuminate\Http\Response
      */
-    public function show(Archivo $archivo)
+    public function show(Tramite $tramite)
     {
         //
     }
@@ -180,10 +136,10 @@ class ArchivoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Archivo  $archivo
+     * @param  \App\Tramite  $tramite
      * @return \Illuminate\Http\Response
      */
-    public function edit(Archivo $archivo)
+    public function edit(Tramite $tramite)
     {
         //
     }
@@ -192,10 +148,10 @@ class ArchivoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Archivo  $archivo
+     * @param  \App\Tramite  $tramite
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Archivo $archivo)
+    public function update(Request $request, Tramite $tramite)
     {
         //
     }
@@ -203,10 +159,10 @@ class ArchivoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Archivo  $archivo
+     * @param  \App\Tramite  $tramite
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Archivo $archivo)
+    public function destroy(Tramite $tramite)
     {
         //
     }

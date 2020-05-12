@@ -25,9 +25,9 @@
 
         <!-- Begin page -->
         <div id="layout-wrapper">
-          @include('layouts.header')
+          @include('layouts.header_c')
             
-          @include('layouts.aside')
+          @include('layouts.aside_c')
 
             <!-- ============================================================== -->
             <!-- Start right Content here -->
