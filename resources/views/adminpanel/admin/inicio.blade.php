@@ -73,7 +73,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card">
+
+                    {{-- <div class="card">
                         <div class="card-body">
                             <h4 class="card-title mb-4">Monthly Earning</h4>
                             <div class="row">
@@ -94,8 +95,9 @@
                             </div>
                             <p class="text-muted mb-0">We craft digital, graphic and dimensional thinking.</p>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
+
                 <div class="col-xl-8">
                     <div class="row">
                         <div class="col-md-4">
@@ -155,7 +157,7 @@
                     </div>
                     <!-- end row -->
 
-                    <div class="card">
+                    {{-- <div class="card">
                         <div class="card-body">
                             <h4 class="card-title mb-4 float-sm-left">Email Sent</h4>
                             <div class="float-sm-right">
@@ -174,12 +176,12 @@
                             <div class="clearfix"></div>
                             <div id="stacked-column-chart" class="apex-charts" dir="ltr"></div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <!-- end row -->
 
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-xl-4">
                     <div class="card">
                         <div class="card-body">
@@ -365,10 +367,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- end row -->
 
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
@@ -570,7 +572,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- end row -->
         </div>
         <!-- container-fluid -->

@@ -4,7 +4,8 @@
     <div data-simplebar class="h-100">
 
         <!--- Sidemenu -->
-        <div id="sidebar-menu" class="mm-active">
+        {{-- <div id="sidebar-menu" class="mm-active"> --}}
+        <div id="sidebar-menu">
             <!-- Left Menu Start -->
             <ul class="metismenu list-unstyled" id="side-menu">
                 <li class="menu-title">Menu</li>
@@ -32,7 +33,7 @@
                         <span>Trámites</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('tramite.create')}}">Nuevo trámite</a></li>
+                        <li><a href="{{ route('solicitud.create')}}">Nuevo trámite</a></li>
                         <li><a href="#">En proceso</a></li>
                         {{-- <li><a href="pages-comingsoon.html">Coming Soon</a></li> --}}
                         {{-- <li><a href="pages-timeline.html">Timeline</a></li> --}}

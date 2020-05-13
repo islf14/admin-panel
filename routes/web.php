@@ -16,22 +16,23 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-Route::get('/w', function () { return view('welcome'); });
 Route::get('/', function () { return view('publicpage.page'); });
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/welcome', function () { return view('welcome'); });
 
 Route::get('/pupload', function () { return view('adminpanel.plantillas.form-uploads'); });
 
-//Cliente tramite
+//Cliente solicitud
 Route::get('/bienvenido', function () { return view('clientepanel.bienvenido'); })->name('bienvenido');
-Route::get('/tramite/create','TramiteController@create')->name('tramite.create');
-Route::post('/tramite/store','TramiteController@store')->name('tramite.store');
+Route::get('/solicitud/create','SolicitudController@create')->name('solicitud.create');
+Route::post('/solicitud/store','SolicitudController@store')->name('solicitud.store');
 
 
-Route::get('raiz/abc', function () { return view('adminpanel.admin.inicio'); })->name('admin');
+//Admin Tramite
+Route::get('/tramites', 'TramiteController@index')->name('tramite.index');
+Route::get('/inicio', function () { return view('adminpanel.admin.inicio'); })->name('inicio');
 Route::get('/formulariotramite', function () { return view('prueba.index'); })->name('formulariotramite');
+
 
 Route::get('/archivo/create', 'ArchivoController@create')->name('archivo.create');
 Route::post('/archivo/store', 'ArchivoController@store')->name('archivo.store');

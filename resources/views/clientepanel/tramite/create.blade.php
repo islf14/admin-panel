@@ -33,7 +33,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title mb-4">Example</h4>
-                            <form class="repeater" enctype="multipart/form-data" role="form" method="POST" action="{{ route('tramite.store') }}">
+                            <form class="repeater" enctype="multipart/form-data" role="form" method="POST" action="{{ route('solicitud.store') }}">
                                 @csrf
                                 <div data-repeater-list="group_a">
                                     <div data-repeater-item class="row">

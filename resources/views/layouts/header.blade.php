@@ -12,7 +12,7 @@
                     </span>
                 </a>
 
-            <a href="{{route('admin')}}" class="logo logo-light">
+            <a href="{{route('inicio')}}" class="logo logo-light">
                     {{-- <span class="logo-sm">
                         <img src="assets/images/logo-light.svg" alt="" height="22">
                     </span>
