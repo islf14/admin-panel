@@ -43,24 +43,31 @@
                             <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                 <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
+                                    <th>fecha</th>
+                                    <th>Solicitud</th>
+                                    {{-- <th>id</th> --}}
+                                    {{-- <th>Estado</th> --}}
+                                    <th>Tipo trámite</th>
+                                    <th>Solicitante</th>
+                                    <th>Estado</th>
+                                    <th>Acción</th>
                                 </tr>
                                 </thead>
                               
                                 <tbody>
                                   @foreach ($tramites as $tramite)
                                     <tr>
-                                      <td>{{ $tramite->id }}</td>
-                                      <td>{{ $tramite->solicitud }}</td>
-                                      <td>{{ $tramite->fecha }}</td>
-                                      <td>{{ $tramite->estadosolicitud_id }}</td>
-                                      <td>{{ $tramite->tramite_id }}</td>
-                                      <td>{{ $tramite->users_id }}</td>
+                                        <td>{{ $tramite->fecha }}</td>
+                                        <td>{{ $tramite->solicitud }}</td>
+                                        {{-- <td>{{ $tramite->id }}</td> --}}
+                                        <td width="10px">{{ $tramite->tra_nombre }}</td>
+                                        <td>{{ $tramite->name }}</td>
+                                        {{-- <td></td> --}}
+                                        <td><span class="badge badge-pill badge-soft-success font-size-12">{{ $tramite->est_nombre }}</span></td>
+                                        <td>
+                                        <a href="javascript:void(0);" class="ml-3 text-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="mdi mdi-pencil font-size-18"></i></a>
+                                        {{-- <a href="javascript:void(0);" class="text-danger" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="mdi mdi-close font-size-18"></i></a> --}}
+                                        </td>
                                     </tr>
                                   @endforeach
                                 </tbody>
@@ -102,6 +109,23 @@
 @endsection
 
 @section('script')
+
+    {{-- <script>
+        $(document).ready(function () {
+        $('.table').dataTable({
+            bAutoWidth: false, 
+            aoColumns : [
+                { sWidth: '15%' },
+                { sWidth: '15%' },
+                { sWidth: '15%' },
+                { sWidth: '15%' },
+                { sWidth: '15%' },
+                { sWidth: '15%' },
+                { sWidth: '10%' }
+            ]
+            });
+        });
+    </script> --}}
     <!-- Required datatable js -->
     <script src="{{asset('assets/libs/datatables.net/js/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js')}}"></script>

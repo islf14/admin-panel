@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Tramite;
 use App\Solicitud;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class TramiteController extends Controller
 {
@@ -15,7 +17,19 @@ class TramiteController extends Controller
      */
     public function index()
     {
-        $tramites = Solicitud::get();
+        // $tramites = Solicitud::get();
+        // $tramites = DB::table('solicitud')->get();
+        $tramites = DB::table('solicitud as s')
+                        ->join('users as u','s.users_id','=','u.id')
+                        ->join('estadosolicitud as e','s.estadosolicitud_id','=','e.id')
+                        ->join('tramite as t','s.tramite_id','=','t.id')
+                        ->select('s.id',
+                        's.solicitud',
+                        's.fecha',
+                        'u.name',
+                        'e.nombre as est_nombre',
+                        't.nombre as tra_nombre')
+                        ->get();
         return view('adminpanel.tramite.index',compact('tramites'));
     }
 
