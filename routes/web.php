@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', function () { return view('publicpage.page'); });
-Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/welcome', function () { return view('welcome'); });
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/pupload', function () { return view('adminpanel.plantillas.form-uploads'); });
 
